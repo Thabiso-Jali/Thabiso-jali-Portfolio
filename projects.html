@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thabiso Jali | Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="logo" href="index.html#home">Thabiso Jali</a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
+            <span class="menu-icon"></span>
+            <span class="menu-text">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+          <span class="theme-toggle__text">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section page-hero">
+        <div class="container">
+          <p class="eyebrow">Projects</p>
+          <h1 class="page-title">Selected Work</h1>
+          <p class="lead">
+            Flip each card to read a short description and click through to GitHub for the full project details.
+          </p>
+        </div>
+      </section>
+
+      <section class="section projects-page">
+        <div class="container">
+          <div class="projects-grid flip-grid">
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <h3>Project One</h3>
+                  <p>Short headline about the project.</p>
+                  <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                  </div>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  <h3>Project One</h3>
+                  <p>
+                    Description: Briefly explain what the project does, the problem it solves, and your role.
+                  </p>
+                  <a class="project-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+                    Click to see more
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <h3>Project Two</h3>
+                  <p>Short headline about the project.</p>
+                  <div class="project-tags">
+                    <span>React</span>
+                    <span>API</span>
+                    <span>UI</span>
+                  </div>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  <h3>Project Two</h3>
+                  <p>
+                    Description: Highlight key features, technologies used, and the impact of the project.
+                  </p>
+                  <a class="project-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+                    Click to see more
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="flip-card" tabindex="0">
+              <div class="flip-card__inner">
+                <div class="flip-card__face flip-card__front">
+                  <h3>Project Three</h3>
+                  <p>Short headline about the project.</p>
+                  <div class="project-tags">
+                    <span>Node</span>
+                    <span>MongoDB</span>
+                    <span>Auth</span>
+                  </div>
+                </div>
+                <div class="flip-card__face flip-card__back">
+                  <h3>Project Three</h3>
+                  <p>
+                    Description: Explain the technical challenge, solution, and outcome in a couple of lines.
+                  </p>
+                  <a class="project-link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+                    Click to see more
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Thabiso Jali. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
