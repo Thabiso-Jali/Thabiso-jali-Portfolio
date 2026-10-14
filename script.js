@@ -127,8 +127,33 @@ contactForm.addEventListener("submit", (event) => {
     return;
   }
 
-  formStatus.textContent = "Thanks! Your message has been sent.";
-  contactForm.reset();
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  formStatus.textContent = "Sending your message...";
+
+  fetch("https://formsubmit.co/ajax/thabiso2885@outlook.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+  })
+    .then(async (response) => {
+      const result = await response.json();
+      const accepted = result.success === true || result.success === "true";
+      if (!response.ok || !accepted) {
+        throw new Error(result.message || "The message could not be sent.");
+      }
+      formStatus.textContent = "Thanks! Your message was sent.";
+      contactForm.reset();
+    })
+    .catch((error) => {
+      formStatus.textContent = `${error.message} Please email Thabiso2885@outlook.com directly if the problem continues.`;
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+    });
 });
 
 initTheme();
